@@ -1,3 +1,6 @@
 venv/
-.~lock.new.docx#
 .gitignore
+.timetracker
+documents/new.docx
+documents/original.docx
+.~lock.new.docx#
