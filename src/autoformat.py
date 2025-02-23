@@ -10,6 +10,9 @@ def iterate_lines(doc_path):
 def remove_digits_regex(text):
     return re.sub(r"\d", "", text)
 
+def remove_unknown_chars(text):
+    return re.sub(r"[^\w\p{Punct}]")
+
 def remove_broken_lines(original_doc_path, new_doc_path):
     new_doc = Document()
     paragraph_text = ""
@@ -26,3 +29,4 @@ def remove_broken_lines(original_doc_path, new_doc_path):
 
 
 remove_broken_lines("./documents/original.docx", "./documents/new.docx")
+remove_unknown_chars("./documents/original.docx", "./documents/new.docx")
